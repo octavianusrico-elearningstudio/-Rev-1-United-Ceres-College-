@@ -57,7 +57,7 @@ export const ParticipantInfo: React.FC<Props> = ({ info, onInfoChange }) => {
                 />
                 <InfoInput
                     id="whatsapp"
-                    label="WhatsApp 号码"
+                    label="联系号码"
                     type="tel"
                     value={info.whatsapp}
                     onChange={handleChange}
@@ -74,8 +74,8 @@ export const ParticipantInfo: React.FC<Props> = ({ info, onInfoChange }) => {
                     icon={<HiEnvelope className="h-5 w-5 text-gray-400" />}
                 />
             </div>
-             <p className="text-xs text-gray-500 italic mt-4">
-                提交您的详细信息即表示您同意根据新加坡《2012年个人数据保护法》(PDPA) 收集、使用和披露您的个人数据，用于与课程相关的沟通。
+             <p className="text-xs text-gray-500 mt-4">
+                提交您的详细信息即表示您同意根据新加坡《2012年个人数据保护法》收集、使用和披露您的个人数据，用于与课程相关的沟通。
             </p>
         </div>
     );

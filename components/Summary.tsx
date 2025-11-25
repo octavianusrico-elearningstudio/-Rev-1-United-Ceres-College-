@@ -27,13 +27,13 @@ export const Summary: React.FC<Props> = ({ totals }) => {
                 )}
                 
                 <div className="flex justify-between items-center">
-                    <span className="text-gray-600">消费税 GST (9%):</span>
+                    <span className="text-gray-600">消费税 (9%):</span>
                     <span className="font-semibold text-gray-900">{formatCurrency(totals.gstAmount)}</span>
                 </div>
                 
                 <div className="mt-2 pt-2 border-t border-gray-300">
                     <div className="flex justify-between items-baseline">
-                        <span className="font-bold text-gray-800 text-base">总计 (GRAND TOTAL):</span>
+                        <span className="font-bold text-gray-800 text-base">总计:</span>
                         <span className="font-bold text-xl text-gray-900">{formatCurrency(totals.grandTotal)}</span>
                     </div>
                 </div>

@@ -58,7 +58,7 @@ const AccordionSection: React.FC<{
                                         value={selectedFees[fee.id] || 1}
                                         onChange={(e) => onQuantityChange(fee.id, parseInt(e.target.value) || 1)}
                                         className={`${inputStyles} w-16 text-center`}
-                                        aria-label={`Quantity for ${fee.name}`}
+                                        aria-label={`${fee.name} 数量`}
                                     />
                                 )}
                            </div>

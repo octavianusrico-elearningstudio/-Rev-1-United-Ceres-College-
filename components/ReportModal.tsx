@@ -14,15 +14,15 @@ interface Props {
 // Helper function to generate a plain text email body from the report data
 const generateEmailBody = (data: ReportData): string => {
     let body = `尊敬的 ${data.participant.name || '同学'},\n\n`;
-    body += `感谢您关注 United Ceres College (联合施瑞斯学院)。以下为您定制的课程费用报价单，请查阅。\n\n`;
+    body += `感谢您关注联邦赛瑞思学院。以下为您定制的课程费用报价单，请查阅。\n\n`;
     body += `========================================\n`;
-    body += `  费用报价单 (Fee Quotation)\n`;
+    body += `  费用报价单\n`;
     body += `========================================\n\n`;
 
     body += `【参与者详情】\n`;
     body += `----------------------------------------\n`;
     body += `姓名: ${data.participant.name || 'N/A'}\n`;
-    body += `WhatsApp: ${data.participant.whatsapp || 'N/A'}\n`;
+    body += `联系号码: ${data.participant.whatsapp || 'N/A'}\n`;
     body += `邮箱: ${data.participant.email || 'N/A'}\n\n`;
 
     data.pathwayDetails.forEach((detail, index) => {
@@ -70,13 +70,13 @@ const generateEmailBody = (data: ReportData): string => {
         const scholarshipLabel = data.totals.scholarship.type === 'percentage' ? `${data.totals.scholarship.value}%` : '固定金额';
         body += `奖学金/折扣 (${scholarshipLabel}): -${formatCurrency(data.totals.scholarshipAmount)}\n`;
     }
-    body += `消费税 GST (9%): ${formatCurrency(data.totals.gstAmount)}\n`;
-    body += `总计 (GRAND TOTAL): ${formatCurrency(data.totals.grandTotal)}\n\n`;
+    body += `消费税 (9%): ${formatCurrency(data.totals.gstAmount)}\n`;
+    body += `总计: ${formatCurrency(data.totals.grandTotal)}\n\n`;
 
     body += `----------------------------------------\n`;
     body += `免责声明: 此报价仅为估算，可能会在不预先通知的情况下进行修订。\n\n`;
     body += `此致,\n`;
-    body += `United Ceres College 敬上\n`;
+    body += `联邦赛瑞思学院 敬上\n`;
     
     return body;
 };
@@ -107,7 +107,7 @@ export const ReportModal: React.FC<Props> = ({ isOpen, onClose, reportData }) =>
             return;
         }
 
-        const subject = 'United Ceres College 费用报价';
+        const subject = '联邦赛瑞思学院费用报价';
         const body = generateEmailBody(reportData);
 
         const mailtoLink = `mailto:${reportData.participant.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
@@ -234,7 +234,7 @@ export const ReportModal: React.FC<Props> = ({ isOpen, onClose, reportData }) =>
                 <div ref={reportContentRef} className="p-8 overflow-y-auto bg-white font-sans text-slate-800 leading-relaxed" id="report-content">
                     <div className="mb-8 flex justify-between items-start border-b border-gray-100 pb-6">
                         <div>
-                            <h1 className="text-3xl font-bold text-slate-900 tracking-wide">United Ceres College</h1>
+                            <h1 className="text-3xl font-bold text-slate-900 tracking-wide">联邦赛瑞思学院</h1>
                             <p className="text-slate-600 text-lg mt-1 tracking-wide">费用报价单</p>
                         </div>
                         <div className="text-right text-sm text-slate-500">
@@ -251,7 +251,7 @@ export const ReportModal: React.FC<Props> = ({ isOpen, onClose, reportData }) =>
                                 <span className="font-semibold text-gray-900 text-base block">{reportData.participant.name || 'N/A'}</span>
                             </div>
                             <div>
-                                <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">WhatsApp</span>
+                                <span className="block text-xs text-gray-500 uppercase tracking-wider mb-1">联系号码</span>
                                 <span className="font-semibold text-gray-900 text-base block tabular-nums">{reportData.participant.whatsapp || 'N/A'}</span>
                             </div>
                             <div>
@@ -369,11 +369,11 @@ export const ReportModal: React.FC<Props> = ({ isOpen, onClose, reportData }) =>
                                     </div>
                                 )}
                                 <div className="flex justify-between text-slate-600 items-center">
-                                    <span>消费税 GST (9%)</span> 
+                                    <span>消费税 (9%)</span> 
                                     <span className="font-medium text-slate-800 tabular-nums">{formatCurrency(reportData.totals.gstAmount)}</span>
                                 </div>
                                 <div className="flex justify-between text-lg font-bold mt-4 pt-4 border-t border-slate-300 items-center">
-                                    <span className="text-slate-900 tracking-wide">总计 (GRAND TOTAL)</span> 
+                                    <span className="text-slate-900 tracking-wide">总计</span> 
                                     <span className="text-brand-primary tabular-nums text-2xl">{formatCurrency(reportData.totals.grandTotal)}</span>
                                 </div>
                             </div>
@@ -381,7 +381,7 @@ export const ReportModal: React.FC<Props> = ({ isOpen, onClose, reportData }) =>
                     </div>
                     <div className="mt-16 pt-6 border-t border-slate-100 text-xs text-slate-400 text-center">
                         <p>免责声明: 此报价仅为估算，可能会在不预先通知的情况下进行修订。</p>
-                        <p className="mt-1 font-medium tracking-wider">United Ceres College | unitedceres.edu.sg</p>
+                        <p className="mt-1 font-medium tracking-wider">联邦赛瑞思学院 | unitedceres.edu.sg</p>
                     </div>
                 </div>
             </div>

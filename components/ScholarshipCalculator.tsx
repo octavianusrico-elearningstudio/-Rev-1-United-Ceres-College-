@@ -27,7 +27,7 @@ export const ScholarshipCalculator: React.FC<Props> = ({ scholarship, onScholars
             <h3 className="text-lg font-semibold text-gray-900 mb-4">奖学金 / 折扣</h3>
             <div className="flex gap-2">
                 <div className="flex-shrink-0">
-                    <label htmlFor="scholarship-type" className="sr-only">Scholarship Type</label>
+                    <label htmlFor="scholarship-type" className="sr-only">奖学金类型</label>
                     <select
                         id="scholarship-type"
                         value={scholarship.type}

@@ -11,7 +11,7 @@ export const Header: React.FC = () => {
                         <h1 className="text-2xl sm:text-3xl font-bold tracking-wide text-brand-text">
                             课程费用计算器
                         </h1>
-                        <p className="text-sm text-brand-text/90 mt-1">United Ceres College (联合施瑞斯学院)</p>
+                        <p className="text-sm text-brand-text/90 mt-1">联邦赛瑞思学院</p>
                     </div>
                 </div>
             </div>

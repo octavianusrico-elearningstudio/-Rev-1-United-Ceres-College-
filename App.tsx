@@ -187,14 +187,14 @@ const App: React.FC = () => {
                                     onChange={(e) => setStudentType(e.target.value as StudentType)}
                                     className={selectStyles}
                                 >
-                                    <option value="international">国际学生 (International)</option>
-                                    <option value="local">本地学生 (Local)</option>
+                                    <option value="international">国际学生</option>
+                                    <option value="local">本地学生</option>
                                 </select>
                             </div>
                              <div className="text-sm text-gray-700 p-3 bg-gray-100 border border-gray-200 rounded-lg">
-                                <strong>注意:</strong> 所有课程费用均需缴纳 9% 的消费税 (GST)。
+                                <strong>注意:</strong> 所有课程费用均需缴纳 9% 的消费税。
                             </div>
-                            <div className="text-xs text-gray-500 italic pt-2">
+                            <div className="text-xs text-gray-500 pt-2">
                                 免责声明: 此报价仅为估算，可能会在不预先通知的情况下进行修订。
                             </div>
                         </div>
