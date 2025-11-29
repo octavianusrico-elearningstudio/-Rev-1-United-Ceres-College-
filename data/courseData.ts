@@ -1,9 +1,9 @@
 import { Course, MiscFee } from '../types';
 
 const standardMiscFees: MiscFee[] = [
-    { id: 're-exam', name: '重考费 (每模块)', amount: 200, category: 'standard' },
-    { id: 'deferment', name: '延期费 (每模块)', amount: 500, category: 'standard' },
-    { id: 're-module', name: '重修费 (每模块)', amount: 700, category: 'standard' },
+    { id: 're-exam', name: '重考费 (每个课程模块)', amount: 200, category: 'standard' },
+    { id: 'deferment', name: '延期费 (每个课程模块)', amount: 500, category: 'standard' },
+    { id: 're-module', name: '重修费 (每个课程模块)', amount: 700, category: 'standard' },
     { id: 'course-change', name: '转课程费', amount: 300, category: 'standard' },
     { id: 'graduation', name: '毕业典礼费', amount: 350, category: 'standard' },
     { id: 'photocopy-a4-bw', name: 'A4 黑白复印 (每页)', amount: 0.10, isPerUnit: true, category: 'standard' },
@@ -102,7 +102,7 @@ export const courseData: Course[] = [
     miscFees: standardMiscFees
   },
   {
-    id: 'cme', name: '通用管理证书 (电子竞技)', abbreviation: '通用管理(电竞)', durationMonths: 4, modules: 4,
+    id: 'cme', name: '通用管理证书 (线上课程)', abbreviation: '通用管理(线上)', durationMonths: 4, modules: 4,
     fees: { application: { local: 150, international: 400 }, course: 5000, material: 200, examination: 200, administrative: 150 },
     miscFees: standardMiscFees
   },
@@ -112,47 +112,47 @@ export const courseData: Course[] = [
     miscFees: standardMiscFees
   },
   {
-    id: 'cme-m', name: '通用管理证书 (中文) (电子竞技)', abbreviation: '通用管理(中/电竞)', durationMonths: 4, modules: 4,
+    id: 'cme-m', name: '通用管理证书 (中文) (线上课程)', abbreviation: '通用管理(中/线上)', durationMonths: 4, modules: 4,
     fees: { application: { local: 150, international: 400 }, course: 5000, material: 200, examination: 200, administrative: 150 },
     miscFees: standardMiscFees
   },
   {
-    id: 'dbm', name: '商业管理大专文凭', abbreviation: '商业大专', durationMonths: 8, modules: 8,
+    id: 'dbm', name: '商业管理国际大一', abbreviation: '商业国际大一', durationMonths: 8, modules: 8,
     fees: { application: { local: 150, international: 400 }, course: 8400, material: 300, examination: 300, administrative: 150 },
     miscFees: standardMiscFees
   },
   {
-    id: 'dbme', name: '商业管理大专文凭 (电子竞技)', abbreviation: '商业大专(电竞)', durationMonths: 8, modules: 8,
+    id: 'dbme', name: '商业管理国际大一 (线上课程)', abbreviation: '商业国际大一(线上)', durationMonths: 8, modules: 8,
     fees: { application: { local: 150, international: 400 }, course: 8400, material: 300, examination: 300, administrative: 150 },
     miscFees: standardMiscFees
   },
   {
-    id: 'dbm-m', name: '商业管理大专文凭 (中文)', abbreviation: '商业大专(中)', durationMonths: 8, modules: 8,
+    id: 'dbm-m', name: '商业管理国际大一 (中文)', abbreviation: '商业国际大一(中)', durationMonths: 8, modules: 8,
     fees: { application: { local: 150, international: 400 }, course: 8400, material: 300, examination: 300, administrative: 150 },
     miscFees: standardMiscFees
   },
   {
-    id: 'dbme-m', name: '商业管理大专文凭 (中文) (电子竞技)', abbreviation: '商业大专(中/电竞)', durationMonths: 8, modules: 8,
+    id: 'dbme-m', name: '商业管理国际大一 (中文) (线上课程)', abbreviation: '商业国际大一(中/线上)', durationMonths: 8, modules: 8,
     fees: { application: { local: 150, international: 400 }, course: 8400, material: 300, examination: 300, administrative: 150 },
     miscFees: standardMiscFees
   },
   {
-    id: 'dthm', name: '旅游与酒店管理大专文凭', abbreviation: '旅游大专', durationMonths: 6, modules: 6,
+    id: 'dthm', name: '旅游与酒店管理国际大一', abbreviation: '旅游国际大一', durationMonths: 6, modules: 6,
     fees: { application: { local: 150, international: 400 }, course: 6300, material: 300, examination: 300, administrative: 150 },
     miscFees: standardMiscFees
   },
   {
-    id: 'dthme', name: '旅游与酒店管理大专文凭 (电子竞技)', abbreviation: '旅游大专(电竞)', durationMonths: 6, modules: 6,
+    id: 'dthme', name: '旅游与酒店管理国际大一 (线上课程)', abbreviation: '旅游国际大一(线上)', durationMonths: 6, modules: 6,
     fees: { application: { local: 150, international: 400 }, course: 6300, material: 300, examination: 300, administrative: 150 },
     miscFees: standardMiscFees
   },
   {
-    id: 'dthm-m', name: '旅游与酒店管理大专文凭 (中文)', abbreviation: '旅游大专(中)', durationMonths: 6, modules: 6,
+    id: 'dthm-m', name: '旅游与酒店管理国际大一 (中文)', abbreviation: '旅游国际大一(中)', durationMonths: 6, modules: 6,
     fees: { application: { local: 150, international: 400 }, course: 6300, material: 300, examination: 300, administrative: 150 },
     miscFees: standardMiscFees
   },
   {
-    id: 'dthme-m', name: '旅游与酒店管理大专文凭 (中文) (电子竞技)', abbreviation: '旅游大专(中/电竞)', durationMonths: 6, modules: 6,
+    id: 'dthme-m', name: '旅游与酒店管理国际大一 (中文) (线上课程)', abbreviation: '旅游国际大一(中/线上)', durationMonths: 6, modules: 6,
     fees: { application: { local: 150, international: 400 }, course: 6300, material: 300, examination: 300, administrative: 150 },
     miscFees: standardMiscFees
   },
